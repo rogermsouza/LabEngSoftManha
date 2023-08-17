@@ -2,16 +2,16 @@ function exerc1() {
     let valor = prompt("Digite o valor: ");
     if(confirm("Deseja conferir o tipo de dado?")){
         if(isNaN(valor)){
-        	alert("O valor é uma string");
-        }
-	else {
-		alert("O valor é um numero");
+            alert("O valor é uma string");
+        }else{
+		 alert("O valor é um numero");
 	}
-   }
-    else {
+} else {
 	    alert("Obrigado por visitar essa página");
    }
 }
+
+
 
 function par(){
 	let numero = prompt("Digite um valor inteiro");
