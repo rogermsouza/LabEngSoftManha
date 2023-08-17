@@ -7,7 +7,8 @@ function exerc1() {
 	else {
 		alert("O valor é um numero");
 	}
-   }else{
+   }
+    else {
 	    alert("Obrigado por visitar essa página");
    }
 }
