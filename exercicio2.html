@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h2>Exercício 2</h2>
+    <p><input type="text" id="nome" name="nome"></p>
+    <p><button onclick="cadNome()">Cadastrar</button>
+<hr>
+
+<h3>Lista de cadastro</h3>
+<div id="lista1"></div>
+
+<script>
+    var listaNomes = [];
+    function cadNome(){
+        nomeCad = document.getElementById("nome").value;
+        listaNomes.push(nomeCad);
+        console.log(listaNomes);
+        const inputNome = document.querySelector('#nome');
+        inputNome.value="";
+        document.getElementById("nome").focus();
+        // var n = document.createElement("lista1");
+        // var texto = document.createTextNode(nome);
+        // document.getElementsByTagName(li).innerHTML.listaNomes;
+        //
+        listaNomes.sort();
+        for(i = 0; i< length(listaNomes); i++){
+            var n = document.createElement("p");
+            document.getElementsByTagName(p).innerHTML.listaNomes(i);
+            
+        }
+    }
+</script>
+
+</body>
+</html>
