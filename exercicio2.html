@@ -4,37 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 2</title>
+	<script>
+		var listaNomes = [];
+
+		function cadNome() {
+			var nomeCad = document.getElementById("nome").value;
+				listaNomes.push(nomeCad);
+				listaNomes.sort();
+				atualizarLista();
+				document.getElementById("nome").value = "";
+				document.getElementById("nome").focus();
+			
+		}
+
+		function atualizarLista() {
+			var listaOl = document.getElementById('lista');
+			listaOl.innerHTML = ""; // Limpando a lista antes de atualizar
+
+			for (var i = 0; i < listaNomes.length; i++) {
+				var item = document.createElement('li');
+				var n = document.createTextNode(listaNomes[i]);
+				item.appendChild(n);
+				listaOl.appendChild(item);
+			}
+		}
+</script>
 </head>
 <body>
-    <h2>Exercício 2</h2>
-    <p><input type="text" id="nome" name="nome"></p>
-    <p><button onclick="cadNome()">Cadastrar</button>
+<h2>Exercício 2</h2>
+<p><input type="text" id="nome" name="nome"></p>
+<p><input type="button" onclick="cadNome()" value="Cadastrar"></p>
 <hr>
 
-<h3>Lista de cadastro</h3>
-<div id="lista1"></div>
-
-<script>
-    var listaNomes = [];
-    function cadNome(){
-        nomeCad = document.getElementById("nome").value;
-        listaNomes.push(nomeCad);
-        console.log(listaNomes);
-        const inputNome = document.querySelector('#nome');
-        inputNome.value="";
-        document.getElementById("nome").focus();
-        // var n = document.createElement("lista1");
-        // var texto = document.createTextNode(nome);
-        // document.getElementsByTagName(li).innerHTML.listaNomes;
-        //
-        listaNomes.sort();
-        for(i = 0; i< length(listaNomes); i++){
-            var n = document.createElement("p");
-            document.getElementsByTagName(p).innerHTML.listaNomes(i);
-            
-        }
-    }
-</script>
+<h2>Valores Cadastrados</h2>
+<ol id="lista"></ol>
 
 </body>
 </html>
