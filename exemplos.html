@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exemplo JavaScript</title>
+
+    <script type="text/javascript">
+    /*    let data = new Date();
+        document.write(data);
+        let dia = data.getDate();
+        document.write("<br>"+dia);*/
+    </script>
+</head>
+<body>
+    <input type="text" id="n1"> + <input type="text" id="n2">
+    <button id="somar"> = </button> <input type="text" id="res">
+    <script type="text/javascript">
+        function Soma(){
+        let n1 =
+        parseInt(document.getElementById('n1').value);
+        let n2 =
+        parseInt(document.getElementById('n2').value);
+        let res = n1 + n2;
+        document.getElementById('res').value = res;
+        document.getElementById('res').disabled = true;
+        }
+
+        document.getElementById("somar").addEventListener("click",Soma);
+    </script>
+</body>
+</html>
