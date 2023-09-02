@@ -18,6 +18,24 @@
 		Relógio:
 	</p>
 	<p id="datetime"></p>
+	<script>
+	    
+	    function updateTime() {
+	      const now = new Date();
+	      const timeString = now.toLocaleTimeString(); 
+	      document.getElementById("time").textContent = timeString;
+	    }
+	    updateTime();
+	
+	    // Atualiza a hora a cada segundo
+	    setInterval(updateTime, 1000);
+  	</script>
+
+
+
+
+
+	
 	<p>Data:</p> 
 	<p id="date"></p>
 	<hr>
@@ -28,13 +46,6 @@
 
 <script>
 
-	function updateHora() {
-	      	const agora = new Date();
-	      	const timeString = agora.toLocaleTimeString(); // Obtém a hora atual como uma string
-	      	document.getElementById("time").textContent = timeString;
-	    }
-	    updateHora();
-	    setInterval(updateHora, 1000);
 
 
 		function updateDate() {
