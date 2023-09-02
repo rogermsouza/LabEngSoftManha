@@ -15,9 +15,9 @@
     </p>
     <hr>
 	<p>
-		Relógio:
+		Relógio: <span id="datetime"></span>
 	</p>
-	<p id="datetime"></p>
+	
 	<script>
 	    
 	    function updateTime() {
@@ -36,18 +36,8 @@
 
 
 	
-	<p>Data:</p> 
-	<p id="date"></p>
-	<hr>
-	<h3>Palíndromo</h3>
-	 <label for="inputText">Digite uma palavra ou frase:</label>
-  <input type="text" id="inputText">
-  <button onclick="verificarPalindromo()">Verificar</button>
-
-<script>
-
-
-
+	<p>Data: <span id="date"></span></p> 
+	<script>
 		function updateDate() {
 		      const now = new Date();
 		      const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
@@ -59,13 +49,14 @@
 		
 		    // Chama a função updateDate inicialmente para exibir a data atual
 		    updateDate();
+	</script>
+	<hr>
+	<h3>Palíndromo</h3>
+	 <label for="inputText">Digite uma palavra ou frase:</label>
+  <input type="text" id="inputText">
+  <button onclick="verificarPalindromo()">Verificar</button>
 
-
-	
-
-
-
-	
+<script>
 	function verificarPalindromo() {
 	      const inputText = document.getElementById("inputText").value.toLowerCase(); // Converte o texto para minúsculas
 
