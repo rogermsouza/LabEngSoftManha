@@ -14,19 +14,17 @@
 	    setInterval(updateHora, 1000);
 
 
-function updateDate() {
-      const now = new Date();
-      const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
-      const dateString = now.toLocaleDateString('pt-BR', options);
-
-      // Atualiza o conteúdo do elemento com a ID "date" com a nova data formatada
-      document.getElementById("date").textContent = dateString;
-    }
-
-    // Chama a função updateDate inicialmente para exibir a data atual
-    updateDate();
-
+		function updateDate() {
+		      const now = new Date();
+		      const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+		      const dateString = now.toLocaleDateString('pt-BR', options);
 		
+		      // Atualiza o conteúdo do elemento com a ID "date" com a nova data formatada
+		      document.getElementById("date").textContent = dateString;
+		    }
+		
+		    // Chama a função updateDate inicialmente para exibir a data atual
+		    updateDate();
 	</script>
 </head>
 <body>
@@ -43,5 +41,29 @@ function updateDate() {
 	<p id="datetime"></p>
 	<p>Data:</p> 
 	<p id="date"></p>
+	<hr>
+	 <label for="inputText">Digite uma palavra ou frase:</label>
+  <input type="text" id="inputText">
+  <button onclick="verificarPalindromo()">Verificar</button>
+
+<script>
+	function verificarPalindromo() {
+	      const inputText = document.getElementById("inputText").value.toLowerCase(); // Converte o texto para minúsculas
+
+	      const cleanedText = inputText.replace(/[^a-z0-9]/g, "");
+	
+	      // Inverte o texto
+	      const reversedText = cleanedText.split("").reverse().join("");
+	
+	      // Verifica se o texto original é igual ao texto invertido
+	      if (cleanedText === reversedText) {
+	        alert("É um palíndromo!");
+	      } else {
+	        alert("Não é um palíndromo!");
+	      }
+	    }
+</script>
+
+	
 </body>
 </html>
