@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 3</title>
 	<script lang="Javascript" type="text/Javascript">
-		// atualizar a exibição da data e hora
-		function updateDateTime() {
-		  const now = new Date();
-		  const dateTimeString = now.toLocaleString(); // Convertendo a data e hora para uma string
-		
-		  // Atualizando a ID "datetime" com a nova data e hora
-		  document.getElementById("datetime").textContent = dateTimeString;
-		}
-		
-		updateDateTime();
-		
-		// Atualização por segundo...
-		setInterval(updateDateTime, 1000);
+		function updateHora() {
+	      	const agora = new Date();
+	      	const timeString = agora.toLocaleTimeString(); // Obtém a hora atual como uma string
+	      	document.getElementById("time").textContent = timeString;
+	    }
+	    updateHora();
+	    setInterval(updateHora, 1000);
 
+
+function updateDate() {
+      const now = new Date();
+      const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+      const dateString = now.toLocaleDateString('pt-BR', options);
+
+      // Atualiza o conteúdo do elemento com a ID "date" com a nova data formatada
+      document.getElementById("date").textContent = dateString;
+    }
+
+    // Chama a função updateDate inicialmente para exibir a data atual
+    updateDate();
+
+		
 	</script>
 </head>
 <body>
@@ -29,6 +37,11 @@
 	    </a>
     </p>
     <hr>
+	<p>
+		Relógio:
+	</p>
 	<p id="datetime"></p>
+	<p>Data:</p> 
+	<p id="date"></p>
 </body>
 </html>
