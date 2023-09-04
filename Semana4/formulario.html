@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="formObj.css" media="screen" />
 </head>
 <body>
+
     <h1>Formulário de Cadastro</h1>
 <!--
     conteudo enviar dados form html para java
@@ -43,10 +44,10 @@ https://horadecodar.com.br/como-pegar-valor-de-input-com-javascript/
             <input type="text" id="foneCelular" name="foneCelular" placeholder="18 99999-9999" />
             </div>
             <div>
-                <input type="radio" id="professor" name="user" value="Professor">
-                <label for="professor">Professor</label><br>
-                <input type="radio" id="aluno" name="user" value="Aluno">
-                <label for="aluno">Aluno</label>
+                <input type="radio" id="Professor" name="user" value="Professor" onclick="showDiv(this)">
+                <label for="Professor">Professor</label><br>
+                <input type="radio" id="Aluno" name="user" value="Aluno" onclick="showDiv(this)">
+                <label for="Aluno">Aluno</label>
             </div>
             <div>
 
@@ -57,22 +58,44 @@ https://horadecodar.com.br/como-pegar-valor-de-input-com-javascript/
 
             
         </div>
-        <div class="">
-            <label for="area">Área</label><br>
-            <input type="text" id="area" name="area" placeholder="Digite a área de atuação" /><br>
+		
+		
+			<script type="text/Javascript">
+				function showDiv(elem){
+				  if(elem.value == "Professor"){
+					  document.getElementById('professor').style.display = "block";
+				  } else if (elem.value == "Aluno") { 
+					  document.getElementById('professor').style.display = "none";
 
-            <label for="matricula">Matrícula</label><br>
-            <input type="text" id="matricula" name="matricula" placeholder="Digite sua matrícula" /><br>
-        </div>
-        <div class="">
-            <label for="lattes">Lattes</label><br>
-            <input type="text" id="lattes" name="lattes" placeholder="Digite a url completa de seu Lattes" /><br>
-        </div>
-        <div class="">
-            <button onclick="">Enviar</button>
-            <button onclick="">Redefinir</button>
-        </div>
+				}
+				
+				}
+			</script>
+		
+		<div id="professor" style="display:none">
+			<div class="">
+					<label for="area">Área</label><br>
+					<input type="text" id="area" name="area" placeholder="Digite a área de atuação" /><br>
+
+					<label for="matricula">Matrícula</label><br>
+					<input type="text" id="matricula" name="matricula" placeholder="Digite sua matrícula" /><br>
+				</div>
+				<div class="">
+					<label for="lattes">Lattes</label><br>
+					<input type="text" id="lattes" name="lattes" placeholder="Digite a url completa de seu Lattes" /><br>
+				</div>
+				<div class="">
+					<button onclick="">Enviar</button>
+					<button onclick="">Redefinir</button>
+			</div>
+		</div>
+		
+		
+        
 
     </form>
+	
+	
+
 </body>
 </html> 
