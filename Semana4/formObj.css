@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 1em;
+}
+
+form {
+    width: 37.5em;
+    margin: 0 auto;
+    box-shadow: 20px;
+}
+
+input[type=text]{
+    width: 100%;
+}
+
+.email {
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#email {
+    width: 400px;
+    
+}
+#nasc {
+    display: flexbox;
+    
+}
+
+.foneArea{
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#foneFixo, #foneCelular {
+    width: 230px;
+}
+input[type=text]{
+    width: 100%;
+}
+
+#prof, #al {
+    display: none;
+}
