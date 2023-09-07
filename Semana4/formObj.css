@@ -4,7 +4,7 @@ body {
 }
 
 form {
-    width: 45%;
+    width: 40em;
     margin: 0 auto;
     border: solid 1px #cecece;
     border-radius: 15px;
@@ -27,12 +27,18 @@ input[type=text]{
     width: 97%!important;
     padding: 10px;
     margin: 5px 0 15px 0;
+    border-radius: 10px;
 }
 
 input[type=date]{
     width: 80%!important;
     padding: 10px;
+    border-radius: 10px;
 }
+input[type=date]:hover{
+    background-color: rgb(231, 241, 213);
+}
+
 
 .email {
     justify-content: space-between;
@@ -45,6 +51,7 @@ input[type=date]{
 }
 #nasc {
     display: flexbox;
+    padding-top: 3px;
     
 }
 
@@ -61,13 +68,17 @@ input[type=text]{
     width: 100%;
 }
 
+input[type=text]:hover{
+    background-color: rgb(231, 241, 213);
+}
+
 #prof, #al {
     display: none;
 }
 
 .botoes{
     display: flex;
-    width: 45%;
+    width: 40em;
     padding-top: 30px;
     margin: 0 auto;
     justify-content: space-between;
@@ -75,15 +86,20 @@ input[type=text]{
 
 .botoes button{
     padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.botoes button:hover{
+    background-color: rgb(221, 241, 184);
 }
 
 .radioOP {
-    padding-top: 10px;
+    padding-top: 15px;
     font-size: 20px;
 }
 
 .result{
-    width: 45%;
+    width: 40em;
     padding-top: 30px;
     margin: 0 auto;
 }
