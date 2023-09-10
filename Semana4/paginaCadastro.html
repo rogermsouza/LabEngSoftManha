@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastramento - Tarefa</title>
+    <link rel="stylesheet" type="text/css" href="formObj.css" media="screen" />
+</head>
+<body>
+    <script src="classe.js"></script>  
+
+    <h1>Formulário de Cadastro</h1>
+<!--
+    conteudo enviar dados form html para java
+https://horadecodar.com.br/como-pegar-valor-de-input-com-javascript/    
+-->
+    <form id="Fcadastro" name="Fcadastro" method="POST">
+        <div class="">
+            <label for="nome">Digite o nome</label><br>
+            <input type="text" id="nome" name="nome" placeholder="Digite o primeiro nome" /><br>
+
+            <label for="sobrenome">Sobrenome</label><br>
+            <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite o sobrenome" /><br>
+    
+        </div>
+        <div class="email">
+            <div>
+                <label for="email">Digite o e-mail</label><br>
+                <input type="text" id="email" name="email"  placeholder="nome@email" required/><br>
+            </div>
+            
+            <div id="nasc">
+                <label for="data_nascimento">Data de Nascimento</label><br>
+                <input type="date" id="data_nascimento" name="data_nascimento" /><br>
+            </div>
+        </div>
+
+        <div>
+            <label for="matricula">Matrícula</label><br>
+            <input type="text" id="matricula" name="matricula" placeholder="Digite a matrícula" /><br><br>
+        </div>
+
+        <div class="foneArea" id="foneArea">
+            <div>
+                <label for="foneFixo">Telefone Fixo</label><br>
+                <input type="text" id="foneFixo" name="foneFixo" placeholder="18 99999-9999" />
+            </div>
+            <div>
+                <label for="foneCelular">Telefone Celular</label><br>
+            <input type="text" id="foneCelular" name="foneCelular" placeholder="18 99999-9999" />
+            </div>
+            <div class="radioOP">
+                <input type="radio" id="Professor" name="user" value="Professor" onclick="showDiv(this)" />
+                <label for="Professor">Professor</label><br>
+                <input type="radio" id="Aluno" name="user" value="Aluno" onclick="showDiv(this)" />
+                <label for="Aluno">Aluno</label>
+            </div>
+            <div>
+
+            </div>
+
+        </div>
+		
+		
+			
+		
+		<div id="prof">
+            <div class="">
+                <label for="area_atuacao">Área</label><br>
+                <input type="text" id="area_atuacao" name="area_atuacao" placeholder="Digite a área de atuação" /><br>
+            </div>
+            <div class="">
+                <label for="link_lattes">Lattes</label><br>
+                <input type="text" id="link_lattes" name="link_lattes" placeholder="Digite a url completa de seu Lattes" /><br>
+            </div>
+        </div>
+        
+        <div id="al">
+            <div class="">
+                <label for="curso">Curso</label><br>
+                <input type="text" id="curso" name="curso" placeholder="Digite seu curso" /><br>
+            </div>
+        </div>
+        <div class="botoes">
+            <input class="bot" type="submit" value="Enviar dados">
+            <input class="bot"  type="reset" value="Limpar dados">
+        </div>
+        
+    </form>
+
+
+    <div class="result" id="output"></div>
+	
+   
+
+</body>
+</html> 
