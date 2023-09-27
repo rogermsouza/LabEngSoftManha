@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta FIPE</title>
+    <style type="text/css">
+        input {
+            margin: 0 0 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <form id="consultaFipe">
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca" />
+        <br>
+        <label for="modelo">Modelo</label>
+        <input type="text" id="modelo" name="modelo" />
+        <br>
+        <label for="ano">Ano</label>
+        <input type="text" id="ano" name="ano" />
+        <br>
+        <label for="cor">Cor</label>
+        <input type="text" id="cor" name="cor" />
+        <br>
+        <label for="km">Km</label>
+        <input type="text" id="km" name="km" />
+        <br>
+        <label for="vlrFipe">Valor Fipe</label>
+        <input type="text" id="vlrFipe" name="vlrFipe" />
+        <br>
+        <label for="anoAtual">Ano Atual</label>
+        <input type="text" id="anoAtual" name="anoAtual" value="" />
+        <br>
+    </form>
+    <button id="botao" onclick="ProcessaFipe()">Enviar</button>
+
+    <script src="scriptCar.js"></script>
+</body>
+</html>
