@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício React: Letreiro</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const rootElement = document.getElementById('root');
+        const frase = "Venha estudar na Fatec";
+        let i = 0;
+
+        function mostra() {
+            ReactDOM.render(frase.slice(0, i + 1), rootElement);
+
+            if (i < frase.length) {
+                i++;
+            } else {
+                i = 0; // Reinicia a contagem para repetir a frase
+            }
+        }
+
+        setInterval(mostra, 250);
+        mostra(); // Chama a função uma vez para iniciar
+    </script>
+</body>
+</html>
